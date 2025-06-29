@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đoạn code để tự động khảo sát</title>
+    <style>
+      body {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE/Edge */
+        user-select: none; /* Standard */
+      }
+
+      code {
+        background-color: #f5f5f5;
+        padding: 16px;
+        display: block;
+        white-space: pre-wrap;
+        border-radius: 8px;
+        font-family: monospace;
+      }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3833114785771243"
+     crossorigin="anonymous"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    oncopy="return false"
+  >
+    <h2>
+      Vui lòng bấm vào nút copy nếu có bị quảng cáo khi ấn thì bạn hiện tại đã
+      copy rồi
+    </h2>
+
+    <code id="codeBlock" style="pointer-events: none;">
+      function _0x5cad(){const
+      _0x5bff40=['159CpJOpM','1442Qqlmtf','873gpbhJB','1220758hTrQGL','btnGui','LayYKien_4514_4514','input[type=\x22radio\x22][value=\x22','value','input','282801IoBtyH','4050416faEMgd','1587415SqdLwZ','39090ZUzrKK','match','dispatchEvent','getElementById','không\x20có\x20ý\x20kiến\x20gì\x20hết','change','4aOWgvL','2824547yaeJRW','6oCYThF'];_0x5cad=function(){return
+      _0x5bff40;};return _0x5cad();}function _0x1abf(_0x32a042,_0x5f4e6b){const
+      _0x5cad74=_0x5cad();return
+      _0x1abf=function(_0x1abf6d,_0x5bf28a){_0x1abf6d=_0x1abf6d-0xf3;let
+      _0x380f74=_0x5cad74[_0x1abf6d];return
+      _0x380f74;},_0x1abf(_0x32a042,_0x5f4e6b);}(function(_0x2d5ed4,_0x4583fa){const
+      _0x2af084=_0x1abf,_0x2b734b=_0x2d5ed4();while(!![]){try{const
+      _0x4e4a13=-parseInt(_0x2af084(0xf6))/0x1*(-parseInt(_0x2af084(0xf7))/0x2)+parseInt(_0x2af084(0xff))/0x3*(-parseInt(_0x2af084(0xf3))/0x4)+parseInt(_0x2af084(0x101))/0x5*(-parseInt(_0x2af084(0xf5))/0x6)+parseInt(_0x2af084(0xf9))/0x7+parseInt(_0x2af084(0x100))/0x8+-parseInt(_0x2af084(0xf8))/0x9*(parseInt(_0x2af084(0x102))/0xa)+parseInt(_0x2af084(0xf4))/0xb;if(_0x4e4a13===_0x4583fa)break;else
+      _0x2b734b['push'](_0x2b734b['shift']());}catch(_0x42adf8){_0x2b734b['push'](_0x2b734b['shift']());}}}(_0x5cad,0x3fc45),(function(){const
+      _0x26a222=_0x1abf,_0x1d7c40=0x4a15,_0x2fac18=0x6,_0x4ba7e8=0x3e8;for(let
+      _0x5f0f84=0x0;_0x5f0f84<=_0x4ba7e8;_0x5f0f84++){const
+      _0x37c51a=_0x1d7c40+_0x5f0f84*_0x2fac18,_0x3504c4=document['querySelector'](_0x26a222(0xfc)+_0x37c51a+'\x22]');if(_0x3504c4){_0x3504c4['checked']=!![],_0x3504c4[_0x26a222(0x104)](new
+      Event(_0x26a222(0x107),{'bubbles':!![]}));const
+      _0x237905=_0x3504c4['id']?.[_0x26a222(0x103)](/\d+$/);if(_0x237905){const
+      _0x363b90=_0x237905[0x0],_0x141b45='LayYKien_'+_0x363b90+'_'+_0x363b90,_0x245159=document[_0x26a222(0x105)](_0x26a222(0xfb));_0x245159&&(_0x245159[_0x26a222(0xfd)]=_0x26a222(0x106),_0x245159[_0x26a222(0x104)](new
+      Event(_0x26a222(0xfe),{'bubbles':!![]})));}}}setTimeout(()=>{const
+      _0x16551f=_0x26a222,_0x1b8aab=document[_0x16551f(0x105)](_0x16551f(0xfa));_0x1b8aab&&_0x1b8aab['click']();},0x3e8);}()));
+    </code>
+    <button id="copyBtn" onclick="copyCode()">📋 Copy code</button>
+
+    <script>
+      // Chặn chuột phải
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      // Chặn bôi đen
+      document.addEventListener("selectstart", function (e) {
+        e.preventDefault();
+      });
+
+      // Chặn Ctrl+U, Ctrl+S, Ctrl+C, Ctrl+Shift+I, F12
+      document.addEventListener("keydown", function (e) {
+        if (
+          (e.ctrlKey && e.key.toLowerCase() === "u") || // Ctrl+U (view source)
+          (e.ctrlKey && e.key.toLowerCase() === "s") || // Ctrl+S (save)
+          (e.ctrlKey && e.key.toLowerCase() === "c") || // Ctrl+C (copy)
+          (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") || // Ctrl+Shift+I (DevTools)
+          e.key === "F12"
+        ) {
+          e.preventDefault();
+          alert("⚠️ Hành động này bị vô hiệu hóa.");
+        }
+      });
+
+      // Cảnh báo khi người dùng cố gắng mở DevTools
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "F12") {
+          alert("DevTools bị chặn!");
+        }
+      });
+
+      function copyCode() {
+      const code = document.getElementById("codeBlock").innerText;
+      navigator.clipboard.writeText(code)
+        .then(() => alert("✅ Đã sao chép đoạn mã!"))
+        .catch(err => alert("❌ Không thể sao chép: " + err));
+    }
+    </script>
+  </body>
+</html>
